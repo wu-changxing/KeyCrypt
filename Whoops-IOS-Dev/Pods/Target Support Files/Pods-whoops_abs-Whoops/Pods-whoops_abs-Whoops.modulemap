@@ -1,0 +1,6 @@
+module Pods_whoops_abs_Whoops {
+  umbrella header "Pods-whoops_abs-Whoops-umbrella.h"
+
+  export *
+  module * { export * }
+}

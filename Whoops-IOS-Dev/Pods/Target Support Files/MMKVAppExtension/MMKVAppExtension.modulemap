@@ -1,0 +1,6 @@
+module MMKVAppExtension {
+  umbrella header "MMKVAppExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}

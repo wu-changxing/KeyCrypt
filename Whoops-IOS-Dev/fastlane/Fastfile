@@ -1,0 +1,148 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+
+  desc "Description of what the lane does"
+  lane :beta do
+    # add actions here: https://docs.fastlane.tools/actions
+
+    versionNumber = get_version_number(
+      xcodeproj: "Whoops.xcodeproj",
+      target: "Whoops"
+    )
+    
+    buildNumber = get_info_plist_value(path: "Whoops/Info.plist", key: "CFBundleVersion")
+
+    set_info_plist_value(path: "keyboard/Info.plist", key: "CFBundleVersion", value: buildNumber)
+
+    # get_certificates           # invokes cert
+    # get_provisioning_profile   # invokes sigh
+
+    build_app(
+      scheme: "Whoops",
+      workspace: "Whoops.xcworkspace",
+      include_symbols: true,
+      include_bitcode: true,
+      export_options: {
+          method: "app-store",
+          provisioningProfiles: { 
+            "life.whoops.app" => "whoops",
+            "life.whoops.app.keyboard" => "whoops keyboard"
+          }
+      },
+      silent:true,
+      export_xcargs: "-allowProvisioningUpdates"
+    )
+
+    changelog_from_git_commits # this will generate the changelog based on your last commits
+    # ENV["DELIVER_ITMSTRANSPORTER_ADDITIONAL_UPLOAD_PARAMETERS"] = "-t Aspera"
+    
+    upload_to_testflight(
+      beta_app_review_info: {
+        contact_email: "lomyr.jo@gmail.com",
+        contact_first_name: "Ran",
+        contact_last_name: "Zhao",
+        contact_phone: "+8618513800015",
+      },
+      wait_processing_interval: 300,
+      distribute_external: true,
+      demo_account_required: false,
+      groups:["p4"],
+    )
+    download_dsyms(version: versionNumber, build_number: buildNumber, wait_for_dsym_processing: true, wait_timeout:1000)
+    upload_symbols_to_crashlytics(
+      dsym_path: lane_context[SharedValues::DSYM_PATHS][0],
+      gsp_path: "./Whoops/GoogleService-Info.plist",
+      binary_path: "./Pods/FirebaseCrashlytics/upload-symbols",
+      dsym_worker_threads:5,
+    )
+    clean_build_artifacts
+  end
+
+  desc "Description of what the lane does"
+  lane :release do
+    # add actions here: https://docs.fastlane.tools/actions
+
+    versionNumber = get_version_number(
+      xcodeproj: "Whoops.xcodeproj",
+      target: "Whoops"
+    )
+    buildNumber = get_info_plist_value(path: "Whoops/Info.plist", key: "CFBundleVersion")
+
+    set_info_plist_value(path: "keyboard/Info.plist", key: "CFBundleVersion", value: buildNumber)
+
+    # get_certificates           # invokes cert
+    # get_provisioning_profile   # invokes sigh
+
+    build_app(
+      scheme: "Whoops",
+      workspace: "Whoops.xcworkspace",
+      include_symbols: true,
+      include_bitcode: true,
+      export_options: {
+        method: "app-store",
+        provisioningProfiles: { 
+          "life.whoops.app" => "whoops",
+          "life.whoops.app.keyboard" => "whoops keyboard"
+        }
+      },
+      silent:true,
+      export_xcargs: "-allowProvisioningUpdates"
+    )
+
+    ENV["DELIVER_ITMSTRANSPORTER_ADDITIONAL_UPLOAD_PARAMETERS"] = "-t Aspera"
+    upload_to_app_store(
+      force: false,
+      phased_release: true,
+      skip_metadata: true,
+      skip_screenshots: true,
+      include_in_app_purchases: false,
+    )
+
+    download_dsyms(version: versionNumber, build_number: buildNumber, wait_for_dsym_processing: true, wait_timeout:1000)
+    upload_symbols_to_crashlytics(
+      dsym_path: lane_context[SharedValues::DSYM_PATHS][0],
+      gsp_path: "./Whoops/GoogleService-Info.plist",
+      binary_path: "./Pods/FirebaseCrashlytics/upload-symbols",
+      dsym_worker_threads:5,
+    )
+    clean_build_artifacts
+  end
+
+  lane :upload do
+    # add actions here: https://docs.fastlane.tools/actions
+
+   
+
+    changelog_from_git_commits # this will generate the changelog based on your last commits
+    ENV["DELIVER_ITMSTRANSPORTER_ADDITIONAL_UPLOAD_PARAMETERS"] = "-t Aspera"
+    upload_to_testflight(
+    beta_app_review_info: {
+    contact_email: "lomyr.jo@gmail.com",
+    contact_first_name: "Ran",
+    contact_last_name: "Zhao",
+    contact_phone: "+8618513800015",
+    },
+    wait_processing_interval: 300,
+                        distribute_external: true,
+                        demo_account_required: false,
+                        groups:["test"],
+                        )
+    clean_build_artifacts
+  end
+end

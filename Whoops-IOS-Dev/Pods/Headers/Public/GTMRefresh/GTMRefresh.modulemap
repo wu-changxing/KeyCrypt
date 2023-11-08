@@ -1,0 +1,6 @@
+module GTMRefresh {
+  umbrella header "GTMRefresh-umbrella.h"
+
+  export *
+  module * { export * }
+}

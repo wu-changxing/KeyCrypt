@@ -1,0 +1,294 @@
+PODS:
+  - CocoaLumberjack (3.7.2):
+    - CocoaLumberjack/Core (= 3.7.2)
+  - CocoaLumberjack/Core (3.7.2)
+  - DeviceKit (4.4.0)
+  - FCUUID (1.3.1):
+    - UICKeyChainStore (~> 2.1.0)
+  - Firebase/Analytics (8.0.0):
+    - Firebase/Core
+  - Firebase/Core (8.0.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (~> 8.0.0)
+  - Firebase/CoreOnly (8.0.0):
+    - FirebaseCore (= 8.0.0)
+  - Firebase/Crashlytics (8.0.0):
+    - Firebase/CoreOnly
+    - FirebaseCrashlytics (~> 8.0.0)
+  - Firebase/Performance (8.0.0):
+    - Firebase/CoreOnly
+    - FirebasePerformance (~> 8.0.0)
+  - FirebaseABTesting (8.0.0):
+    - FirebaseCore (~> 8.0)
+  - FirebaseAnalytics (8.0.0):
+    - FirebaseAnalytics/AdIdSupport (= 8.0.0)
+    - FirebaseCore (~> 8.0)
+    - FirebaseInstallations (~> 8.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
+    - GoogleUtilities/MethodSwizzler (~> 7.4)
+    - GoogleUtilities/Network (~> 7.4)
+    - "GoogleUtilities/NSData+zlib (~> 7.4)"
+    - nanopb (~> 2.30908.0)
+  - FirebaseAnalytics/AdIdSupport (8.0.0):
+    - FirebaseAnalytics/Base (= 8.0.0)
+    - FirebaseCore (~> 8.0)
+    - FirebaseInstallations (~> 8.0)
+    - GoogleAppMeasurement (= 8.0.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
+    - GoogleUtilities/MethodSwizzler (~> 7.4)
+    - GoogleUtilities/Network (~> 7.4)
+    - "GoogleUtilities/NSData+zlib (~> 7.4)"
+    - nanopb (~> 2.30908.0)
+  - FirebaseAnalytics/Base (8.0.0):
+    - FirebaseCore (~> 8.0)
+    - FirebaseInstallations (~> 8.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
+    - GoogleUtilities/MethodSwizzler (~> 7.4)
+    - GoogleUtilities/Network (~> 7.4)
+    - "GoogleUtilities/NSData+zlib (~> 7.4)"
+    - nanopb (~> 2.30908.0)
+  - FirebaseCore (8.0.0):
+    - FirebaseCoreDiagnostics (~> 8.0)
+    - GoogleUtilities/Environment (~> 7.4)
+    - GoogleUtilities/Logger (~> 7.4)
+  - FirebaseCoreDiagnostics (8.0.0):
+    - GoogleDataTransport (~> 9.0)
+    - GoogleUtilities/Environment (~> 7.4)
+    - GoogleUtilities/Logger (~> 7.4)
+    - nanopb (~> 2.30908.0)
+  - FirebaseCrashlytics (8.0.0):
+    - FirebaseCore (~> 8.0)
+    - FirebaseInstallations (~> 8.0)
+    - GoogleDataTransport (~> 9.0)
+    - nanopb (~> 2.30908.0)
+    - PromisesObjC (~> 1.2)
+  - FirebaseInstallations (8.0.0):
+    - FirebaseCore (~> 8.0)
+    - GoogleUtilities/Environment (~> 7.4)
+    - GoogleUtilities/UserDefaults (~> 7.4)
+    - PromisesObjC (~> 1.2)
+  - FirebasePerformance (8.0.0):
+    - FirebaseCore (~> 8.0)
+    - FirebaseInstallations (~> 8.0)
+    - FirebaseRemoteConfig (~> 8.0)
+    - GoogleDataTransport (~> 9.0)
+    - GoogleUtilities/Environment (~> 7.4)
+    - GoogleUtilities/ISASwizzler (~> 7.4)
+    - GoogleUtilities/MethodSwizzler (~> 7.4)
+    - Protobuf (~> 3.15)
+  - FirebaseRemoteConfig (8.0.0):
+    - FirebaseABTesting (~> 8.0)
+    - FirebaseCore (~> 8.0)
+    - FirebaseInstallations (~> 8.0)
+    - GoogleUtilities/Environment (~> 7.4)
+    - "GoogleUtilities/NSData+zlib (~> 7.4)"
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - GoogleAppMeasurement (8.0.0):
+    - GoogleAppMeasurement/AdIdSupport (= 8.0.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
+    - GoogleUtilities/MethodSwizzler (~> 7.4)
+    - GoogleUtilities/Network (~> 7.4)
+    - "GoogleUtilities/NSData+zlib (~> 7.4)"
+    - nanopb (~> 2.30908.0)
+  - GoogleAppMeasurement/AdIdSupport (8.0.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
+    - GoogleUtilities/MethodSwizzler (~> 7.4)
+    - GoogleUtilities/Network (~> 7.4)
+    - "GoogleUtilities/NSData+zlib (~> 7.4)"
+    - nanopb (~> 2.30908.0)
+  - GoogleDataTransport (9.0.0):
+    - GoogleUtilities/Environment (~> 7.2)
+    - nanopb (~> 2.30908.0)
+    - PromisesObjC (~> 1.2)
+  - GoogleUtilities/AppDelegateSwizzler (7.4.1):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (7.4.1):
+    - PromisesObjC (~> 1.2)
+  - GoogleUtilities/ISASwizzler (7.4.1)
+  - GoogleUtilities/Logger (7.4.1):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (7.4.1):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (7.4.1):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (7.4.1)"
+  - GoogleUtilities/Reachability (7.4.1):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (7.4.1):
+    - GoogleUtilities/Logger
+  - GTMRefresh (1.3.9)
+  - GTMSessionFetcher (1.5.0):
+    - GTMSessionFetcher/Full (= 1.5.0)
+  - GTMSessionFetcher/Core (1.5.0)
+  - GTMSessionFetcher/Full (1.5.0):
+    - GTMSessionFetcher/Core (= 1.5.0)
+  - JSSAlertView (5.0.2)
+  - KeychainAccess (4.2.2)
+  - Kingfisher (6.3.0)
+  - LoginputEngineLib (2.0.5):
+    - FMDB
+  - MMKVAppExtension (1.2.8):
+    - MMKVCore (~> 1.2.8)
+  - MMKVCore (1.2.8)
+  - nanopb (2.30908.0):
+    - nanopb/decode (= 2.30908.0)
+    - nanopb/encode (= 2.30908.0)
+  - nanopb/decode (2.30908.0)
+  - nanopb/encode (2.30908.0)
+  - PromisesObjC (1.2.12)
+  - Protobuf (3.17.0)
+  - SDWebImage/Core (5.11.1)
+  - SDWebImageSVGKitPlugin (1.3.0):
+    - SDWebImage/Core (~> 5.10)
+    - SVGKit (>= 2.1)
+  - SVGKit (2.1.0):
+    - CocoaLumberjack (~> 3.0)
+  - SwiftProtobuf (1.17.0)
+  - swiftScan (1.2.1)
+  - SwiftyJSON (5.0.1)
+  - SwipeCellKit (2.7.1)
+  - UICKeyChainStore (2.1.2)
+  - "UITextView+Placeholder (1.4.0)"
+  - WechatOpenSDK (1.8.7.1)
+  - Weibo_SDK (3.3.0)
+
+DEPENDENCIES:
+  - DeviceKit
+  - FCUUID
+  - Firebase/Analytics
+  - Firebase/Crashlytics
+  - Firebase/Performance
+  - GoogleUtilities/AppDelegateSwizzler
+  - GoogleUtilities/Environment
+  - GoogleUtilities/ISASwizzler
+  - GoogleUtilities/Logger
+  - GoogleUtilities/MethodSwizzler
+  - GoogleUtilities/Network
+  - "GoogleUtilities/NSData+zlib"
+  - GoogleUtilities/Reachability
+  - GoogleUtilities/UserDefaults
+  - GTMRefresh
+  - GTMSessionFetcher
+  - JSSAlertView
+  - KeychainAccess
+  - Kingfisher (~> 6.0)
+  - "LoginputEngineLib (from `git@bitbucket.org:R0uter/loginputenginelib.git`, branch `master`)"
+  - MMKVAppExtension
+  - SDWebImageSVGKitPlugin
+  - SVGKit (from `https://github.com/SVGKit/SVGKit.git`, branch `3.x`)
+  - SwiftProtobuf
+  - swiftScan
+  - SwiftyJSON (~> 5.0)
+  - SwipeCellKit
+  - "UITextView+Placeholder (~> 1.2)"
+  - WechatOpenSDK
+  - Weibo_SDK (from `https://github.com/sinaweibosdk/weibo_ios_sdk.git`)
+
+SPEC REPOS:
+  https://cdn.cocoapods.org/:
+    - CocoaLumberjack
+    - DeviceKit
+    - FCUUID
+    - Firebase
+    - FirebaseABTesting
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseCoreDiagnostics
+    - FirebaseCrashlytics
+    - FirebaseInstallations
+    - FirebasePerformance
+    - FirebaseRemoteConfig
+    - FMDB
+    - GoogleAppMeasurement
+    - GoogleDataTransport
+    - GoogleUtilities
+    - GTMRefresh
+    - GTMSessionFetcher
+    - JSSAlertView
+    - KeychainAccess
+    - Kingfisher
+    - MMKVAppExtension
+    - MMKVCore
+    - nanopb
+    - PromisesObjC
+    - Protobuf
+    - SDWebImage
+    - SDWebImageSVGKitPlugin
+    - SwiftProtobuf
+    - swiftScan
+    - SwiftyJSON
+    - SwipeCellKit
+    - UICKeyChainStore
+    - "UITextView+Placeholder"
+    - WechatOpenSDK
+
+EXTERNAL SOURCES:
+  LoginputEngineLib:
+    :branch: master
+    :git: "git@bitbucket.org:R0uter/loginputenginelib.git"
+  SVGKit:
+    :branch: 3.x
+    :git: https://github.com/SVGKit/SVGKit.git
+  Weibo_SDK:
+    :git: https://github.com/sinaweibosdk/weibo_ios_sdk.git
+
+CHECKOUT OPTIONS:
+  LoginputEngineLib:
+    :commit: 078f7972ef2dce82fde100b41b3f59705fe43835
+    :git: "git@bitbucket.org:R0uter/loginputenginelib.git"
+  SVGKit:
+    :commit: c4dbac4fd86ad8108afb85004213209b214c9739
+    :git: https://github.com/SVGKit/SVGKit.git
+  Weibo_SDK:
+    :commit: acd1f69f62edefe499aa75540fcad2eefcb57c57
+    :git: https://github.com/sinaweibosdk/weibo_ios_sdk.git
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: b7e05132ff94f6ae4dfa9d5bce9141893a21d9da
+  DeviceKit: 2c5d7485a2fa10b65c0091b2952d30843a6ba06d
+  FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
+  Firebase: 73c3e3b216ec1ecbc54d2ffdd4670c65c749edb1
+  FirebaseABTesting: daebc95ec8829607d07dfe5e92dc3285aca29bc4
+  FirebaseAnalytics: dcb92c7c9ef4fa7ffac276e8f87bd4fc8c97f1b8
+  FirebaseCore: 3f09591d51292843e2a46f18358d60bf4e996255
+  FirebaseCoreDiagnostics: a31d987ba0fe16d59886a5dbadc2f1de871f88c8
+  FirebaseCrashlytics: 69cddb6bfa7656c5346e603bc85b029392252ee6
+  FirebaseInstallations: c4aab1005d6547b00a7529777fe52f5d4d45165b
+  FirebasePerformance: d89e4529f8ab0837cfe3697506262fb2759ca69e
+  FirebaseRemoteConfig: 055f6b5ba1751547596ded5032c4d5c6054ca501
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  GoogleAppMeasurement: c6bbc9753d046b5456dd4f940057fbad2c28419e
+  GoogleDataTransport: 11e3a5f2c190327df1a4a5d7e7ae3d4d5b9c9e4c
+  GoogleUtilities: f8a43108b38a68eebe8b3540e1f4f2d28843ce20
+  GTMRefresh: f69751db662aa6bfce56e4d7a1792ace85afd80e
+  GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
+  JSSAlertView: 18345e37d8295827428c12b773b6d75d0dfd0b28
+  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
+  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
+  LoginputEngineLib: a3e8edc7e6fff9d611df68b1d8bcbc45c67a9b6b
+  MMKVAppExtension: ff5317297658dca7e650d5f7ce34457b3e7e433a
+  MMKVCore: 93cc90d5796dd82108de3214cb0b67a0d438b811
+  nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
+  PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  Protobuf: 7327d4444215b5f18e560a97f879ff5503c4581c
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  SDWebImageSVGKitPlugin: 8797e1c9b9baf80bd50d28e673e16a12359af1c9
+  SVGKit: 132b010efbf57ec345309fe4a7f627c0a40c5d63
+  SwiftProtobuf: 9c85136c6ba74b0a1b84279dbf0f6db8efb714e0
+  swiftScan: 0849e7d7c1c641384767a573ee8cb90b88d1ddd9
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  SwipeCellKit: 3972254a826da74609926daf59b08d6c72e619ea
+  UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
+  "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
+  WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
+  Weibo_SDK: 7478846cccb43c4785ba76b214115fb7ec9dc0d4
+
+PODFILE CHECKSUM: 97b503228cc69fb33e0823e2cbe836cc49611a5e
+
+COCOAPODS: 1.10.1

@@ -1,0 +1,41 @@
+{
+  "name": "LoginputEngineLib",
+  "version": "2.0.5",
+  "summary": "A short description of LoginputEngineLib.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "git@bitbucket.org:R0uter/loginputenginelib.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "R0uter": "lomyr.jo@gmail.com"
+  },
+  "source": {
+    "git": "git@bitbucket.org:R0uter/loginputenginelib.git",
+    "tag": "2.0.5"
+  },
+  "swift_versions": "5",
+  "platforms": {
+    "ios": "10.0",
+    "osx": "10.12"
+  },
+  "source_files": "LoginputEngineLib/**/*.{h,m,swift,c}",
+  "resources": [
+    "LoginputEngineLib/pyfreq.plist",
+    "LoginputEngineLib/pycorrection.plist"
+  ],
+  "user_target_xcconfig": {
+    "OTHER_C_FLAGS": "$(inherited) MDB_USE_POSIX_SEM MDB_USE_ROBUST=0"
+  },
+  "public_header_files": [
+    "LoginputEngineLib/LoginputEngineLib.h",
+    "LoginputEngineLib/SwiftLMDB/LMDB/lmdb.h"
+  ],
+  "dependencies": {
+    "FMDB": [
+
+    ]
+  },
+  "swift_version": "5"
+}

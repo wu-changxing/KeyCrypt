@@ -1,0 +1,2 @@
+git "git@bitbucket.org:R0uter/loginputenginelib.git" "master"
+github "https://github.com/R0uter/swift-conflux-wallet-sdk" "main"

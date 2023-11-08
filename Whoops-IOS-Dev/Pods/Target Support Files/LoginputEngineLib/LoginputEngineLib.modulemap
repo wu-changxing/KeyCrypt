@@ -1,0 +1,6 @@
+module LoginputEngineLib {
+  umbrella header "LoginputEngineLib-umbrella.h"
+
+  export *
+  module * { export * }
+}

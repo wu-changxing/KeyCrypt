@@ -1,0 +1,66 @@
+plugin 'cocoapods-wholemodule'
+# use_frameworks!
+use_modular_headers!
+
+platform :ios, '10.0'
+
+def google_utilites
+  pod 'GoogleUtilities/AppDelegateSwizzler'
+  pod 'GoogleUtilities/Environment'
+  pod 'GoogleUtilities/ISASwizzler'
+  pod 'GoogleUtilities/Logger'
+  pod 'GoogleUtilities/MethodSwizzler'
+  pod 'GoogleUtilities/NSData+zlib'
+  pod 'GoogleUtilities/Network'
+  pod 'GoogleUtilities/Reachability'
+  pod 'GoogleUtilities/UserDefaults'
+  pod 'GTMSessionFetcher'
+end
+
+
+abstract_target 'whoops_abs' do
+    target 'Whoops' do
+        google_utilites
+        pod 'LoginputEngineLib', :git => 'git@bitbucket.org:Aaron/loginputenginelib.git', :branch => 'master'
+        pod 'DeviceKit'
+        pod 'UITextView+Placeholder', '~> 1.2'
+        pod 'JSSAlertView'
+        pod 'FCUUID'
+        pod 'MMKVAppExtension'
+        pod 'SwiftyJSON', '~> 5.0'
+        pod 'UITextView+Placeholder', '~> 1.2'
+        pod "Weibo_SDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git"
+        pod 'WechatOpenSDK'
+        pod 'Kingfisher', '~> 6.0'
+        pod 'SDWebImageSVGKitPlugin'
+        pod 'SVGKit', :git => 'https://github.com/SVGKit/SVGKit.git', :branch => '3.x'
+        pod 'KeychainAccess'
+        pod 'SwiftProtobuf'
+        pod 'Firebase/Analytics'
+        pod 'Firebase/Crashlytics'
+        pod 'Firebase/Performance'
+        pod 'SwipeCellKit'
+        pod 'GTMRefresh'
+        pod 'swiftScan'
+        
+    end
+    target 'keyboard' do
+        google_utilites
+        pod 'LoginputEngineLib', :git => 'git@bitbucket.org:Aaron/loginputenginelib.git', :branch => 'master'
+        pod 'FCUUID'
+        pod 'MMKVAppExtension'
+        pod 'DeviceKit'
+        pod 'UITextView+Placeholder', '~> 1.2'
+        pod 'SwiftyJSON', '~> 5.0'
+        pod 'Kingfisher', '~> 6.0'
+        pod 'SDWebImageSVGKitPlugin'
+        pod 'SVGKit', :git => 'https://github.com/SVGKit/SVGKit.git', :branch => '3.x'
+        pod 'KeychainAccess'
+        pod 'SwiftProtobuf'
+        pod 'Firebase/Analytics'
+        pod 'Firebase/Crashlytics'
+    end
+    
+end
+
+workspace 'Whoops'

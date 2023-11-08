@@ -1,0 +1,4 @@
+git "git@bitbucket.org:R0uter/loginputenginelib.git" "078f7972ef2dce82fde100b41b3f59705fe43835"
+github "R0uter/swift-conflux-wallet-sdk" "6d88a88057c5b6c57a2b1db747a446b58db1721c"
+github "ccgus/fmdb" "2.7.7"
+github "krzyzanowskim/CryptoSwift" "1.4.0"

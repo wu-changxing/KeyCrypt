@@ -1,0 +1,67 @@
+option java_package = "com.whoops.chat.common.im.bean.msg";
+option java_outer_classname = "WhoopsMsg";
+
+enum HeadType{
+    LOGIN_REQUEST = 0;
+    LOGIN_RESPONSE = 1;
+    LOGOUT_REQUEST = 2;
+    LOGOUT_RESPONSE = 3;
+    KEEPALIVE_REQUEST = 4;
+    KEEPALIVE_RESPONSE = 5;
+    MESSAGE_REQUEST = 6;
+    MESSAGE_RESPONSE = 7;
+    MESSAGE_NOTIFICATION = 8;
+}
+
+message LoginRequest{
+   required string userId = 1;
+   required string deviceId = 2;
+   required string token = 3;
+   optional uint32 platform = 4;
+   optional string appVersion = 5;
+}
+
+message Response{
+    required bool  result = 1;
+    required uint32 code = 2;
+    optional string info = 3;
+    optional uint32 expose = 4;
+}
+
+
+message MessageRequest{
+    optional uint32 type = 1;
+    optional string groupId = 2;
+    optional uint32 msgType = 3;
+    optional string fromId = 4;
+    optional string toId = 5;
+    optional uint64 time = 6;
+    optional string message = 7;
+    optional string secretKey = 8;
+    optional string selfSecretKey = 9;
+    optional string fromNick = 10;
+    optional uint32 flag = 11;
+}
+
+message MessageHeartBeat{
+   required  uint32   seq = 1;
+   required  string   userId = 2;
+   required  string   json = 3;
+}
+
+message MessageNotification {
+    optional uint64 noId = 1;
+    optional string json = 2;
+    optional string timestamp = 3;
+}
+
+message Message{
+    optional HeadType type = 1;
+    optional uint64  sequence = 2;
+    optional string  sessionId = 3;
+    optional LoginRequest loginRequest = 4;
+    optional Response response = 5;
+    optional MessageRequest messageRequest = 6;
+    optional MessageHeartBeat  heartBeat = 7;
+    optional MessageNotification  notification = 8;
+}

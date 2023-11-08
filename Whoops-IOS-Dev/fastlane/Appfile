@@ -1,0 +1,6 @@
+app_identifier("life.whoops.app") # The bundle identifier of your app
+apple_id("lomyr.jo@gmail.com") # Your Apple email address
+itc_team_id "121955244"
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
